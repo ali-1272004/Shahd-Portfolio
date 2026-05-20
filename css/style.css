@@ -1,5 +1,4 @@
 /* ═══════════════════════════════════════════════════════
-   LUXURY PORTFOLIO — style.css
    Color Palette:
      --rose:     #E0B4D2
      --silver:   #ABAFB5
@@ -50,6 +49,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -57,6 +58,8 @@ body {
   background-color: var(--midnight);
   color: var(--text-primary);
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
@@ -115,6 +118,7 @@ h4 {
 /* ─── SECTION PADDING ────────────────────────────── */
 .section-pad {
   padding: 110px 0;
+  overflow-x: hidden;
 }
 
 /* ─── SECTION HEADER ─────────────────────────────── */
@@ -527,8 +531,8 @@ h4 {
 }
 .portrait-frame {
   position: relative;
-  width: 420px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 420px;
 }
 
 .portrait-ring {
@@ -574,6 +578,11 @@ h4 {
     0 0 80px rgba(98, 35, 71, 0.2);
   position: relative;
   z-index: 2;
+}
+.portrait-img-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .portrait-placeholder {
   display: block;
@@ -665,6 +674,11 @@ h4 {
   overflow: hidden;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-subtle);
+}
+.about-img-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .about-accent-card {
   position: absolute;
@@ -1143,17 +1157,21 @@ h4 {
     margin-inline: auto;
   }
   .portrait-frame {
-    max-width: 340px;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
   }
   .portrait-badge {
-    left: 0;
+    left: 10px;
+    bottom: 20px;
   }
   .about-content {
     padding-left: 0;
   }
   .about-accent-card {
-    right: 0;
+    right: 10px;
     bottom: -15px;
+    max-width: 90%;
   }
   .glass-card {
     padding: 32px 24px;

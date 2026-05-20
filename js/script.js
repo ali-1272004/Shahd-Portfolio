@@ -76,7 +76,7 @@ form.addEventListener("submit", async (e) => {
   // Hide old success message if visible
   successMsg.classList.remove("show");
 
-  // Button loading state
+  // Button loading
   sendBtn.disabled = true;
   sendBtn.querySelector(".btn-text").textContent = "Sending...";
 
@@ -92,19 +92,18 @@ form.addEventListener("submit", async (e) => {
     });
 
     if (response.ok) {
-      // ✅ Show success message
+      // success message
       successMsg.innerHTML = `<i class="fa-solid fa-circle-check me-2"></i>Your message has been sent! I'll get back to you shortly.`;
       successMsg.classList.add("show");
 
       // Reset form
       form.reset();
 
-      // Auto hide after 5 seconds
       setTimeout(() => {
         successMsg.classList.remove("show");
       }, 5000);
     } else {
-      // Show error message
+      // error message
       successMsg.innerHTML = `<i class="fa-solid fa-triangle-exclamation me-2"></i>Something went wrong. Please try again.`;
       successMsg.classList.add("show");
     }
